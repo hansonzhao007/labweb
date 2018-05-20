@@ -9,6 +9,7 @@
 Imports
 ================================= */
 @import url('font-awesome.min.css');
+/* @import url('font-awesome.css'); */
 @import url('simpletextrotator.css');
 @import url('overwrite.css');
 @import url('animate.css');
@@ -927,13 +928,8 @@ img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;
 }
-section#blog {
-	background: #f2f2f2;
-}
-
-.home-post {
-	background:#fff;
-	
+.home-post .post-meta {
+    background: #1BAC91;
 }
 
 .home-post:hover {
