@@ -156,53 +156,6 @@
   //animation
   new WOW().init();
 
-  // news list
-  var dd = $('.news').easyTicker({
-    direction: 'up',
-		easing: 'easeInOutCirc',
-		speed: 10,
-		interval: 3000,
-		height: 'auto',
-		visible: 1,
-		mousePause: 1,
-    controls: {
-			up: '.up',
-			down: '.down',
-			toggle: '.toggle',
-			stopText: 'Stop !!!'
-		}
-  }).data('easyTicker');
-
-  $('.vis1').click(function(){
-		dd.options['visible'] = 1;
-		
-	});
-	
-	$('.visall').click(function(){
-		// dd.stop();
-		dd.options['visible'] = 0 ;
-		// dd.start();
-	});
-
-  //Google Map
-  var get_latitude = $('#google-map').data('latitude');
-  var get_longitude = $('#google-map').data('longitude');
-
-  function initialize_google_map() {
-    var myLatlng = new google.maps.LatLng(get_latitude, get_longitude);
-    var mapOptions = {
-      zoom: 14,
-      scrollwheel: false,
-      center: myLatlng
-    };
-    var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map
-    });
-  }
-  google.maps.event.addDomListener(window, 'load', initialize_google_map);
-  
 
   $(function() {
     Grid.init();
