@@ -366,6 +366,10 @@ Team
 ================================= */
 .box-team img {
 	margin-bottom: 30px;
+	/* max-height:300px;
+	max-width:300px;
+	height:auto;
+    width:auto; */
 }
 
 
@@ -662,6 +666,15 @@ ul.clients li {
 	display: inline;
 }
 
+ol li{
+	padding: 0 15px;
+    color: #666;
+    border-left: 4px solid #ddd;
+    border-left-width: 4px;
+    border-left-style: solid;
+	border-left-color: #0e4487;
+	margin-bottom: 20px;
+}
 
 /* ================================
 Bottom widget
