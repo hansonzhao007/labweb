@@ -1,4 +1,4 @@
-var speed = 2000;
+var speed = 4000;
 canTick = true;
 
 $(document).ready(function() {
@@ -109,10 +109,10 @@ function animateTickerElementHorz() {
 	}
 }
 
-$('.ticker-container').on('mouseover', function() {
-	canTick = false;
-});
+// $('.ticker-container').on('mouseover', function() {
+// 	canTick = false;
+// });
 
-$('.ticker-container').on('mouseout', function() {
-	canTick = true;
-});
+// $('.ticker-container').on('mouseout', function() {
+// 	canTick = true;
+// });
