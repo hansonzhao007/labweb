@@ -1,4 +1,4 @@
-var speed = 4000;
+var speed = 6000;
 canTick = true;
 
 $(document).ready(function() {
@@ -14,7 +14,7 @@ $(document).ready(function() {
 		if ($(this).find('li').height() > 30) {
 			$(this).find('li').css({
 				'height': '20px',
-				'width': '200%',
+				// 'width': '200%',
 				'text-align': 'left',
 				'padding-left': '5px'
 			});
@@ -109,10 +109,10 @@ function animateTickerElementHorz() {
 	}
 }
 
-// $('.ticker-container').on('mouseover', function() {
-// 	canTick = false;
-// });
+$('.ticker-container').on('mouseover', function() {
+	canTick = false;
+});
 
-// $('.ticker-container').on('mouseout', function() {
-// 	canTick = true;
-// });
+$('.ticker-container').on('mouseout', function() {
+	canTick = true;
+});
