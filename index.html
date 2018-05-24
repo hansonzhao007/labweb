@@ -11,7 +11,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/style.css" rel="stylesheet" media="screen">
   <link href="color/default.css" rel="stylesheet" media="screen">
-
+  <link rel="stylesheet" type="text/css" href="css/ticker.css">
   <!-- =======================================================
     Theme Name: Alstar
     Theme URL: https://bootstrapmade.com/alstar-free-parallax-bootstrap-template/
@@ -64,7 +64,29 @@
       </div>
     </div>
   </div>
-
+  
+  <div class="ticker-container">
+    <div class="ticker-caption">
+      <p>Meeting Schedule</p>
+    </div>
+    <ul>
+      <div>
+        <li><span>Breaking News 1 &ndash; <a href="#">read more</a></span></li>
+      </div>
+      <div>
+        <li><span>Breaking News 2 &ndash; <a href="#">read more</a></span></li>
+      </div>
+      <!-- <div>
+        <li><span>Breaking News 3 &ndash; <a href="#">read more</a></span></li>
+      </div>
+      <div>
+        <li><span>Breaking News 4 &ndash; <a href="#">read more</a></span></li>
+      </div>
+      <div>
+        <li><span>Breaking News 5 &ndash; <a href="#">read more</a></span></li>
+      </div> -->
+    </ul>
+  </div>
   <!-- About -->
   <section id="about" class="home-section bg-white">
     <div class="container">
@@ -87,7 +109,7 @@
           <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3> -->
           <p>
             In response to high demand of undergraduates at UTA's CSE department on Computer System research, 
-            the faculty and graduate students actively work on system research projects mainly supported by National Science Foundation (NSF)
+            the faculty and graduate students actively working on system research projects mainly supported by National Science Foundation (NSF)
             organize the program with missions of: <br/>
             <ol>
               <li style="text-align: left">
@@ -115,8 +137,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="color-light">
-            <h2 class="wow bounceInDown" data-wow-delay="0.5s">Details are the key for perfection</h2>
-            <p class="lead wow bounceInUp" data-wow-delay="1s">We mix all detailed things together</p>
+            <!-- <h2 class="wow bounceInDown" data-wow-delay="0.5s">Details are the key for perfection</h2>
+            <p class="lead wow bounceInUp" data-wow-delay="1s">We mix all detailed things together</p> -->
           </div>
         </div>
       </div>
@@ -145,7 +167,7 @@
               Download projects introduction materials in the following link. </br>
               <a class="btn btn-theme" 
               href="files/RTU-UTA.pdf" > Download Introduction </a>
-              '
+              '              
               >
                 <img src="img/works/thumbs/3.jpg" alt="img01"/>
                 <h6><strong>Project Introduction</strong></h6>
@@ -153,25 +175,29 @@
             </li>
             <li>
               <a href="https://github.com/wuxb45/trietoy" data-largesrc="img/works/1.jpg" 
-              data-title="Portfolio title" 
+              data-title="Advanced Index Structures" 
               data-description='
-              minuts. </br>
+              Index structures are critical to the performance of data-intensive in-memory applications, such as databases and key-value stores. A time- and space-efficient structure supporting range queries is highly demanded. In this project, students learn various such structures, including trie and B+ tree, study literature for newly proposed structures, and invent highly-scalable index structures to support emerging massive-scale storage-class memory.    </br>
               <a class="btn btn-theme" 
               href="https://docs.google.com/document/d/1MGHkXxPo9qNj3Mqf_7qojtoLr3yvBAZuhXatYDwxmEU/edit?usp=sharing"> 
               Group Meeting Minutes</a>
+              <a class="btn btn-theme" 
+              href="https://github.com/wuxb45/trietoy" > Project Link</a>
               '>
                 <img src="img/works/thumbs/1.jpg" alt=""/>
-                <h6><strong>Optimizing Search Tree</strong></h6>
+                <h6><strong>Advanced Index Structures</strong></h6>
 							</a>
             </li>
             <li>
               <a href="https://github.com/wuxb45/repltoy" data-largesrc="img/works/2.jpg" 
-              data-title="Portfolio title" 
+              data-title="Intelligent Replacement Algorithms" 
               data-description='
-              minuts. </br>
+              As an essential policy in the management of caches, replacement algorithms are critical for cache resource utilization and program’s performance. Our team have developed a number of widely-adopted replacement algorithms, including LIRS and Clock-pro. In this project, students learn various replacement algorithms and explore ways to improve them in the context of big data processing and cloud computing.  </br>
               <a class="btn btn-theme" 
               href="https://docs.google.com/document/d/1-Kx4H4z-VdGZMHnOC3IOY7mMkOct6RIRkMJj08FDPqk/edit?usp=sharing"> 
               Group Meeting Minutes</a>
+              <a class="btn btn-theme" 
+              href="https://github.com/wuxb45/repltoy" > Project Link</a>
               '>
                 <img src="img/works/thumbs/2.jpg" alt=""/>
                 <h6><strong>Replacement Algorithms</strong></h6>
@@ -194,38 +220,71 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
-            <h2>Our Team</h2>
+            <h2>Undergraduate Students</h2>
             <div class="heading-line"></div>
             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class=" col-sm-3 col-md-3 col-lg-3">
-          <div class="box-team wow bounceInUp" data-wow-delay="0.1s">
+      <div class="row center_container">
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.1s">
             <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
             <h4><a href="https://github.com/aabhaskharel" class="btn btn-theme" >Aabhas Kharel</a> </h4>
             <!-- <p> </p> -->
           </div>
         </div>
-        <div class=" col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.3s">
-          <div class="box-team wow bounceInUp">
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.1s">
             <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
             <h4><a href="https://github.com/dongchenye" class="btn btn-theme" >Dongchen Ye</a></h4>
             <!-- <p> </p> -->
           </div>
         </div>
-        <div class=" col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.5s">
-          <div class="box-team wow bounceInUp">
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.1s">
             <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
             <h4><a href="https://github.com/dongqingye7" class="btn btn-theme" >Dongqing Ye</a></h4>
             <!-- <p></p> -->
           </div>
         </div>
-        <div class=" col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
-          <div class="box-team wow bounceInUp">
+
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.1s">
+              <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
+              <h4><a href="#" class="btn btn-theme" >George Hinkel</a></h4>
+              <!-- <p></p> -->
+            </div>
+        </div>
+
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.16s">
+              <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
+              <h4><a href="#" class="btn btn-theme" >Mehul Jain</a></h4>
+              <!-- <p></p> -->
+            </div>
+        </div>
+
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.16s">
+              <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
+              <h4><a href="#" class="btn btn-theme" >Safal Lamsal</a></h4>
+              <!-- <p></p> -->
+            </div>
+        </div>
+
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.16s">
+              <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
+              <h4><a href="#" class="btn btn-theme" >Siddharth Vadgama</a></h4>
+              <!-- <p></p> -->
+            </div>
+        </div>
+
+        <div class="col-xs-12  col-sm-3 col-md-3 col-lg-3 float_center">
+          <div class="box-team wow bounceInUp child" data-wow-delay="0.16s">
             <img src="img/team/git.png" alt="" class="img-circle img-responsive" />
-            <h4><a href="https://github.com/nirmik379kale" class="btn btn-theme" >Nirmik Kale</a></h4>
+            <h4><a href="#" class="btn btn-theme" >Vivek Patel</a></h4>
             <!-- <p></p> -->
           </div>
         </div>
@@ -268,6 +327,7 @@
   <script src="js/modernizr.custom.js"></script>
   <script src="js/grid.js"></script>
   <script src="js/stellar.js"></script>
+  <script src="js/ticker.js"></script>
   <!-- Contact Form JavaScript File -->
   <!-- <script src="contactform/contactform.js"></script> -->
 
