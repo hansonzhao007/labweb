@@ -367,16 +367,33 @@ About
 /* ================================
 Team
 ================================= */
+.center_container { 
+	position: relative;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  
+.float_center {
+display:inline-block;
+}
+
 .box-team img {
 	margin: auto auto auto auto;
 	/* margin-bottom: 30px; */
 	max-height:250;
 	max-width:250;
 	height:80%;
-    width:80%;
+	width:80%;
+	border-style: solid;
+	border-width: thin;
+	border-color: transparent;
 }
 
-
+.box-team img:hover {
+	/* background-color: #0e3c67; */
+	border-color: #0e3c67;
+}
 
 /* ================================
 Services
@@ -746,8 +763,8 @@ more media queries
 	.box-team img {
 		float: none;
 		margin:0 auto;
-		height: 70%;
-		width: 70%;
+		height: 50%;
+		width: 50%;
 	}
 	.box-team {
 		margin-bottom: 30px;
