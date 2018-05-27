@@ -564,8 +564,8 @@ Works
 
 .og-fullimg img {
 	display: inline-block;
-	max-height: 100%;
-	max-width: 100%;
+	max-height: 94%;
+	max-width: 94%;
 }
 
 .og-details h4 {
@@ -687,7 +687,7 @@ ul.clients li {
 	display: inline;
 }
 
-ol li{
+#about ol li{
 	padding: 0 15px;
     color: #666;
     border-left: 4px solid #ddd;
@@ -818,4 +818,35 @@ more media queries
 	header h1{
 		font-size: 70px;
 	}
+}
+
+/* Meeting Scheduel */
+/* LIST #2 */
+#list2 { 
+	text-align: left;
+}
+#list2 ol { 
+	padding: 7px;
+	font-style:italic; 
+	font-family:Georgia, Times, serif; 
+	font-size:24px;  
+}
+#list2 ol li {
+	margin-bottom: 0;
+}
+#list2 ol li p { 
+	padding-left: 8px;
+	font-style:normal; 
+	font-size:13px; 
+	color: #fff;
+	border-left: 1px solid #999; 
+	margin-bottom: 5px;
+}
+#list2 ol li p em { 
+	display:block; 
+	color: #ec0b43;
+}
+#collapseExample {
+	background-color: #000000;
+	margin-top: 1px;
 }

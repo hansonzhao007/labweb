@@ -15,7 +15,7 @@
 	/*background-color: white;
 	color: black;*/
 	font-size: 1.1em;
-	margin-bottom: 15px;
+	margin-bottom: 0;
 }
 .ticker-container .ticker-caption {
 	height: 50%;
@@ -33,6 +33,9 @@
 	display: table-cell;
 	vertical-align: middle;
 	font-weight: bold;
+}
+.ticker-container .ticker-caption p:hover {
+	color: #951700;
 }
 .ticker-container ul {
 	list-style: none;
@@ -102,12 +105,12 @@
 
 @media (min-width: 768px) {
   .ticker-container {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 992px) {
   .ticker-container {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
