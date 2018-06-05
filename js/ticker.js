@@ -1,4 +1,4 @@
-var speed = 6000;
+var speed = 7000;
 canTick = true;
 
 $(document).ready(function() {
