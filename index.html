@@ -75,23 +75,33 @@
     </div>
     <ul>
       <div style="width: 30px">
-          <li><span>Third summer meeting at <a>9:30am</a> at ERB 101 this <a>Wednesday, June 6</a> 
+          <li><span>Fourth summer meeting at <a>9:30am</a> at ERB 101 this <a>Monday, June 11</a> 
           </span></li>
       </div>
       <div style="width: 30px">
+          <li><span>Third summer meeting at <a>9:30am</a> at ERB 101 this <a>Wednesday, June 6</a> 
+          </span></li>
+      </div>
+      <!-- <div style="width: 30px">
         <li><span>Second summer meeting at <a>9:30am</a> at ERB 101 this <a>Tuesday (5/29)</a> 
-          <!-- 「 <a>LIRS</a>: investigate impact of size of the stack Q and strategies to adjust it. 」 -->
+          「 <a>LIRS</a>: investigate impact of size of the stack Q and strategies to adjust it. 」
         </span></li>
       </div>
       <div>
         <li><span>First summer meeting at <a>9:30am</a> at ERB 101 this <a>Friday (5/25)</a> 
           「 <a>Trie</a>: improvement of trie's space efficiency. 」
-        </span></li>
+        </span></li> -->
       </div>
     </ul>
   </div>
   <div class="collapse" id="collapseExample">
     <div class="card card-body" id="list2">
+      <ol>
+          <li><p><em>Jun 6th, 2018</em> Discussed the metrics used, it was suggested that perhaps the Q2 hit ratio alone is not sufficient to decide when to change Q size, it was suggested to compare the Q2 hit ratio with the LIRS hit ratio, perhaps factoring in the cache allocation percentage to S and Q. </p></li>
+      </ol>
+      <ol>
+          <li><p><em>May 29th, 2018</em> Discussion about the ARC, LRU, LIRS algorithms. </p></li>
+      </ol>
       <ol>
         <li><p><em>May 25th, 2018</em> In the LIRS algorithm, there is a parameter, which is size of the stack Q. By default it is set as 1% of the cache size. However, for the highest hit ratio the parameter may need to be set differently with different workloads or even dynamically for one workload. A major effort during the summer is to investigate impact of the parameter and strategies to adjust it, or equivalently to come up with an improved LIRS algorithm.</p></li>
      </ol>
