@@ -191,11 +191,12 @@ var Grid = (function() {
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
-			minHeight : 500,
+			minHeight : 560,
 			speed : 350,
 			easing : 'ease'
 		};
-
+	
+	console.log($items);
 	function init( config ) {
 
 		// the settings..
@@ -400,7 +401,6 @@ var Grid = (function() {
 
 		},
 		close : function() {
-
 			var self = this,
 				onEndFn = function() {
 					if( support ) {
@@ -416,9 +416,14 @@ var Grid = (function() {
 					this.$largeImg.fadeOut( 'fast' );
 				}
 				this.$previewEl.css( 'height', 0 );
+				$.each($items, function( key, value ) {
+					// alert( key + ": " + value );
+					$( this ).css( 'height', $( this ).data( 'height' ) ).on( transEndEventName, onEndFn );
+				});
 				// the current expanded item (might be different from this.$item)
-				var $expandedItem = $items.eq( this.expandedIdx );
-				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
+				// var $expandedItem = $items.eq( this.expandedIdx );
+
+				// $expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
 
 				if( !support ) {
 					onEndFn.call();
