@@ -7,4 +7,9 @@
         <Name>Administrator</Name>
         <ID>a7864d3c3f683dc7814ade9c15369b1c</ID>
     </Student>
+
+    <Student>
+        <Name>Song Jiang</Name>
+        <ID>924fd2628dc9e6255208223c7657ebbb</ID>
+    </Student>
 </List>
