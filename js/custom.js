@@ -164,4 +164,56 @@
     Grid.init();
   });
   
+  function eraseCookie(name) {   
+      document.cookie = name+'=; Max-Age=-99999999;';  
+  }
+
+  function loadXMLDoc() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+      }
+    };
+    xmlhttp.open("GET", "students.xml", false); // sync load
+    xmlhttp.send();
+  }
+  function myFunction(xml) {
+    var i;
+    var xmlDoc = xml.responseXML;
+    var table="<tr><th>Artist</th><th>Title</th></tr>";
+    var x = xmlDoc.getElementsByTagName("List");
+    for (i = 0; i <x.length; i++) { 
+      var students = x[i].getElementsByTagName('Student');
+      for (j = 0; j < students.length; ++j) {
+        var name = students[j].getElementsByTagName("Name")[0].childNodes[0].nodeValue;
+        var ID   = students[j].getElementsByTagName("ID")[0].childNodes[0].nodeValue;
+        // console.log(name + ID);
+        idPool.add(ID);
+      }
+    }
+    // console.log(idPool);
+    var tmp = getCookie("sid");
+    // console.log(tmp);
+  }
+
+
+
+    loadXMLDoc()
+    
+    var sid = getCookie("sid");
+    // console.log(idPool);
+    if (idPool.has(sid)) {
+      $(".login").each(function() {
+        console.log("verified user");
+        $(this).show();
+        $(this).removeClass("login");
+      });
+    }
+    else {
+      $(".login").each(function() {
+        console.log("guest user");
+        $(this).hide();
+      });
+    }
 })(jQuery);

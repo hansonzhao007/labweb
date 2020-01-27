@@ -12,17 +12,49 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/style.css" rel="stylesheet" media="screen">
   <link href="color/default.css" rel="stylesheet" media="screen">
-  
-  <!-- =======================================================
-    Theme Name: Alstar
-    Theme URL: https://bootstrapmade.com/alstar-free-parallax-bootstrap-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.crypt.js"></script>
+  <script>
+    let idPool = new Set();
+    function setCookie(name,value,days) {
+      var expires = "";
+      if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days*24*60*60*1000));
+          expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function myLogin() {
+      var strVal = $("#sid").val();
+      if (strVal.length == 0) {
+          alert('Please enter student id');
+      }
+      else {
+          var strMD5 = $().crypt({
+              method: "md5",
+              source: strVal
+          });
+          setCookie("sid", strMD5);
+          console.log(strMD5);
+      }
+      location.reload();
+    }
+  </script>
 </head>
 
 <body>
-
   <!-- Navigation -->
   <nav class="navbar navbar-default fixed-to-top" role="navigation">
     <div class="container">
@@ -45,6 +77,11 @@
           <!-- <li><a href="#services">Service</a></li> -->
           <li><a href="#portfolio">Undergraduate Projects</a></li>
           <li><a href="#team">Team</a></li>
+          <li><a href="#team">Team</a></li>
+          <li>
+            <input type="text" name="sname" placeholder="Student Name"></br>
+            <input type="text" name="sid" id='sid' placeholder="Student ID"></li>
+          <li><button class="btn btn-theme" onclick="myLogin()">Login</button></li>
           <!-- <li><a href="#contact">Contact</a></li> -->
         </ul>
       </div>
@@ -67,7 +104,7 @@
   </div>
   
   <!-- Meeting Schedule  -->
-  <div class="ticker-container">
+  <div class="ticker-container login">
     <div class="ticker-caption" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
       <p>
         Meeting Schedule
@@ -110,7 +147,8 @@
         </span></li> -->
       </div>
     </ul>
-  </div>
+  </div><!-- Meeting Schedule  -->
+
   <div class="collapse" id="collapseExample">
     <div class="card card-body" id="list2">
       <ol>
@@ -227,7 +265,7 @@
                 data-title="Machine-learning Assisted Prefetching" 
                 data-description='
                 In a storage device serving read requests from multiple users/tenants it is a challenge to recognize consistent access sequences from individual processes for accurate prefetching. Furthermore, prefetching interacts with caching strategies as they share the same buffer in the memory for data storage. In the project, students will explore prefetching opportunities by leveraging machine learning techniques and learn/practice coding skills to engineer a system that covers prefetching, caching, and buffer cache space management.</br>
-                <a class="btn btn-theme" 
+                <a class="btn btn-theme login" 
               href="https://docs.google.com/document/d/1ZysI2aptk0fMNgm0PEbrmEkHlcUCM72bzPT9d-u-Utc/edit?usp=sharing"> 
               Group Meeting Minutes</a>
               <h4>Open Source Code By:</h4>
@@ -251,7 +289,7 @@
               data-title="Intelligent Replacement Algorithms" 
               data-description='
               As an essential policy in the management of caches, replacement algorithms are critical for cache resource utilization and program’s performance. Our team have developed a number of widely-adopted replacement algorithms, including LIRS and Clock-pro. In this project, students learn various replacement algorithms and explore ways to improve them in the context of big data processing and cloud computing.  </br>
-              <a class="btn btn-theme" 
+              <a class="btn btn-theme login" 
               href="https://docs.google.com/document/d/1-Kx4H4z-VdGZMHnOC3IOY7mMkOct6RIRkMJj08FDPqk/edit?usp=sharing"> 
               Group Meeting Minutes</a>
               <h4>Open Source Code By:</h4>
@@ -267,7 +305,7 @@
               data-title="Advanced Index Structures" 
               data-description='
               Index structures are critical to the performance of data-intensive in-memory applications, such as databases and key-value stores. A time- and space-efficient structure supporting range queries is highly demanded. In this project, students learn various such structures, including trie and B+ tree, study literature for newly proposed structures, and invent highly-scalable index structures to support emerging massive-scale storage-class memory.    </br>
-              <a class="btn btn-theme" 
+              <a class="btn btn-theme login" 
               href="https://docs.google.com/document/d/1MGHkXxPo9qNj3Mqf_7qojtoLr3yvBAZuhXatYDwxmEU/edit?usp=sharing"> 
               Group Meeting Minutes</a>
               <h4>Open Source Code By:</h4>
@@ -515,7 +553,7 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- js -->
-  <script src="js/jquery.js"></script>
+  
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/mb.bgndGallery.js"></script>

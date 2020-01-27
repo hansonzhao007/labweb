@@ -129,6 +129,10 @@ margin, padding
   }
 }
 
+.login {
+	display: none !important;
+}
+
 .back-to-top:focus {
   outline: none;
 }
