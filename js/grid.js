@@ -364,13 +364,13 @@ var Grid = (function() {
 				};
 
 			this.$title.html( eldata.title );
-			console.log(idPool);
+			// console.log(idPool);
 			var sid = getCookie("sid");
-			console.log(sid);
+			// console.log(sid);
 			if (idPool.has(sid)) {
 				eldata.description = eldata.description.replace("login", " ");
 			}
-			console.log(eldata.description);
+			// console.log(eldata.description);
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
 
